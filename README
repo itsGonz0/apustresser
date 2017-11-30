@@ -1,0 +1,7 @@
+# apustress
+This Xerxes version was modified by itsGonz0_
+Download the File apustress.c to your Desktop
+Open Terminal and type these commands
+cd Desktop
+gcc apustress.c -o apustress
+USAGE : ./apustress www.fakesite.com 80
