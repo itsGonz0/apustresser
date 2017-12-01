@@ -1,4 +1,5 @@
-/* APUStresser - XerXes (http://www.alienparadoxunit.com)  (http://www.thehackernews.com)  */
+/* APUStresser - XerXes (http://www.alienparadoxunit.com)  (http://www.thehackernews.com)
+		Coded by @itsGonz0_ and @akrolla47 */
 
 #include <stdio.h>
 #include <stdlib.h>
@@ -52,8 +53,8 @@ void broke(int s) {
 	// do nothing
 }
 
-#define CONNECTIONS 100
-#define THREADS 1000
+#define CONNECTIONS 25
+#define THREADS 200
 
 void attack(char *host, char *port, int id) {
 	int sockets[CONNECTIONS];
